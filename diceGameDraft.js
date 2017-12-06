@@ -106,18 +106,18 @@ function winner() {
 
 //let highestScore = document.getElementById("highestScore");
 
-let player1Total = document.getElementById("player1Score);                                                                  
+let player1Total = document.getElementById("player1Score");                                                                  
 
-let player2Total = document.getElementByID("player2Score);                                                                
-	if (player1Total > player2Total)
-{
-	document.getElementById("player1Score).className = "total win";
-	document.getElementById("player2Score).className = "total lose";
+let player2Total = document.getElementByID("player2Score");                                                                
+	if (player1Total > player2Total) {
+		document.getElementById("player1Total").className = "total win";
+		document.getElementById("player2Total").className = "total lose";
+	}
+	else if (player2Total > player1Total) {
+		document.getElementById("player1Total").className = "total lose";
+		document.getElementById("player2Total").className = "total win";
+	}
 }
-else if (player2Total > player1Total)
-	document.getElementById(player1Total).className = "total lose";
-	document.getElementById(player2Total).className = "total win";
-{
 // score >=100
 //className property is used to sets or returns(used as sets in this script)the class name of an element
 

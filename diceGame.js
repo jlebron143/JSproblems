@@ -19,8 +19,8 @@ function play ()
 
 // prompt was created to display a dialog box that prompts to the players for input 
 
-let player1 = alert("Welcome to Dice 100, player 1?");
-let player2 = alert("Welcome to Dice 100, player 2?");
+let player1 = alert("Welcome to Dice 100, Dragon?");
+let player2 = alert("Welcome to Dice 100, Nighthawk?");
 let points1 = 0;
 let points2 = 0;
 let rollDiceButton = document.getElementById("rollDiceButton");
@@ -74,7 +74,7 @@ status.innerHTML =  ("You rolled " + scoreTotal );
 		if (d1 == 1 && d2 ==1) {
 	// if both of the dices equal 1, the score is to be set to equal 0
 		player1Score.innerHTML += points1;
-		status.innerHTML += " player1 score has been reset back to zero";
+		status.innerHTML += " Dragons score has been reset back to zero";
 		points1 = setScoreToZero();
 
 	//else statement needs to be entered to specify the block of code to be executed if the condition is false
@@ -83,11 +83,11 @@ status.innerHTML =  ("You rolled " + scoreTotal );
 	//if a player rolls doubles, the players score is doubled
 	//this statement will make scoreTotal double
 			points1 = doubleScore(points1);
-			player1score.innerHTML += "Great Job, you have doubled your score!" + "scoreTotal"
+			player1Score.innerHTML += "Great Job Dragon, you have doubled your score!" + "scoreTotal"
 		} else {
 			points1 = points1 + scoreTotal;
 			player1Score.innerHTML += points1
-			status.innerHTML += " Come on up to the plate, player2";
+			status.innerHTML += " Come on up to the plate, Nighthawk";
 			console.log(points1);
 		}
 		moves = 2;
@@ -95,7 +95,7 @@ status.innerHTML =  ("You rolled " + scoreTotal );
 	else {
 		if (d1 == 1 && d2 ==1){
 			player2Score.innerHTML += points2;
-			status.innerHTML += player2+"Player2 score has been reset back to zero";
+			status.innerHTML += player2+"Nighthawk score has been reset back to zero";
 			points2 = setScoreToZero();
 		}
 		else if (d1 == d2){
@@ -104,7 +104,7 @@ status.innerHTML =  ("You rolled " + scoreTotal );
 		} else {
 			points2 + points2 + scoreTotal;
 			player2Score.innerHTML += points2;
-			status.innerHTML += "You're up next!" + "player1";
+			status.innerHTML += "You're up next!" + "Dragon";
 		}
 		moves = 1;
 	}
@@ -119,43 +119,29 @@ function winner(){
 
 //let highestScore = document.getElementById("highestScore");
 
-let player1Total = document.getElementById(points1);                                                                  
+let player1Score = points1; 
+	console.log("Dragon has" + scoreTotal +"." )                                                                 
 	
-let player2Total = document.getElementByID(points2);                                                                
+let player2Score = points2;
+	console.log("Nighthawk has" + scoreTotal + ".")                                                                
 	
 	if (points1 > points2){
-		document.getElementById("player1Total").className = "total win";
-		document.getElementById("player2Total").className = "total lose";
-		alert("Player 1 Wins");
-		console.log(" player 1 wins")
+		document.getElementById("player1Score").className = "total win";
+		document.getElementById("player2Score").className = "total lose";
+		alert("Dragon Wins");
+		console.log(" Dragon wins")
 	}
 	else if (points2 > points1) {
-		document.getElementById("player1Total").className = "total lose";
-		document.getElementById("player2Total").className = "total win";
-		alert("player 2 wins");
-		console.log("player 2 wins");
+		document.getElementById("player1Score").className = "total lose";
+		document.getElementById("player2Score").className = "total win";
+		alert("Nighthawk wins");
+		console.log("Nighthawk wins");
 	}
 	else if (points1 === points2) {
-		document.getElementById("player1Total").className = "Total win";
-		document.getElementById("player2Total").className = "total win";
+		document.getElementById("player1Score").className = "Total win";
+		document.getElementById("player2Score").className = "total win";
 		alert(" Game Tied!");
 		console.log("Game Tied")
 		// tie!
 	}
-}		
-// score >=100
-//className property is used to sets or returns(used as sets in this script)the class name of an element
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}	

@@ -40,3 +40,15 @@ body {
     cursor: pointer;
     text-transform: capitalize;
 }
+
+#player1Total {
+    position: absolute;
+    top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+        text-align: center;
+    color: maroon;
+    margin-left: 40px;
+}

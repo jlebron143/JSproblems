@@ -31,3 +31,7 @@ function stringCompression (str) {
 }
 stringCompression("aaaaaaaaaddddddddggggggggg");
 
+
+//replace while for for loop 
+// set conditions in for loop ; that is going to stop the loop
+// move comparsion inside the for loop  
